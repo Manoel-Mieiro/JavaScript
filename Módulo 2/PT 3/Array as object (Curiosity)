@@ -1,0 +1,14 @@
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+console.log(typeof days); // -> object
+//Acima, apesar de ser um array, o JS o classifca como object pois tudo o que não pertence...
+//...aos tipos primitivos vira objeto
+
+//Entretanto, com o comando abaixo é possível especificar se é de fato array ou objeto
+let dias = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let dia = "Sunday";
+
+console.log(typeof dias); // -> object
+console.log(typeof dia); // -> string
+
+console.log(dias instanceof Array); // -> true
+console.log(dia instanceof Array); // -> false

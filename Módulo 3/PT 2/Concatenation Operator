@@ -1,0 +1,14 @@
+let greetings = "Hi";
+console.log(greetings + " " + "Alice"); // -> Hi Alice
+
+let sentence = "Happy New Year ";
+let newSentence = sentence + 10191;
+
+console.log(newSentence); // -> Happy New Year 10191
+console.log(typeof newSentence); // -> string
+
+//----------------Usando Assignment operators ------------------//
+let frase  = "Happy New ";
+frase += "Year ";
+frase += 10191;
+console.log(frase); // -> Happy New Year 10191

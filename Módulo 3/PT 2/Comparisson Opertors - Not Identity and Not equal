@@ -1,0 +1,24 @@
+/*
+There are also complementary operators to those just demonstrated – the nonidentity operator !== and the inequality operator !=. 
+The first returns true if the operands are not identical, in other words,
+they are equal but of different types, or they are simply different. The second returns true if the operands are different.
+*/
+
+
+console.log(10 !== 5); // -> true
+console.log(10 !== 10); // -> false
+console.log(10 !== 10n); // -> true
+console.log(10 !== "10"); // -> true
+console.log("10" !== "10"); // -> false
+console.log("Alice" !== "Bob"); // -> true
+console.log(0 !== false); // -> true
+console.log(undefined !== false); // -> true
+console.log(10 != 5); // -> true
+console.log(10 != 10); // -> false
+console.log(10 != 10n); // -> false
+console.log(10 != "10"); // -> false
+console.log("10" != "10"); // -> false
+console.log("Alice" != "Bob"); // -> true
+console.log(0 !=  false); // -> false
+console.log(undefined != false); // -> true
+console.log(NaN != NaN); // -> true

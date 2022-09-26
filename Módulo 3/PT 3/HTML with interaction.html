@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>      
+        <input id="myId" type="text"></input>
+        <button onclick="console.log(document.getElementById('myId').value)">
+    Get Text</button>
+    </body>
+</html>
+
+
+<!--Run this code in the editor, making sure it is in the window dedicated to HTML (index.html tab). 
+    The <input> element is an input field where you can enter any text. In our case, we’ve given this element the myId identifier.
+     The <button> element, as you can guess, corresponds to ... a button. 
+        Using the onClick attribute, we have indicated that if the button is clicked, a piece of JavaScript code is to be run. 
+        In this code, we refer to the document object (a fragment of the DOM model), which represents our website.
+         We search for the element with the myId identifier, retrieve its value (i.e. the text entered) and print the result on the console.
+
+    As you can see, the idea is relatively simple, but both the DOM model and HTML language are definitely 
+    beyond the scope of the current course. So how can we communicate with the user if we do not use these standard mechanisms?
+    
+    There is another solution. Please note that it is not used in modern web applications, 
+    but it allows you to easily give the user the opportunity to enter data or make certain decisions.
+     We will use it in this course as a dummy for normal communication, rather than as an element 
+     that you will find useful in real programming. The solution is to use dialog boxes.   
+-->
