@@ -1,0 +1,34 @@
+#		#include<stdio.h>
+#		int fat, n;
+#		|  |	|int main(){
+#		|  |	|   |   fat = fat * n;
+#		|  |	|   |	}
+#		|  |	|printf("\n%d", fat);
+#		return 0;
+
+.data
+	num: .asciiz	"Insira o número que deseja descobrir o fatorial	"	#variável que recebe o número inteiro
+.text
+li $v0, 4			#imprimir string
+la $a0, num			#carregar a string em $a0
+syscall			#imprimir a sring de num
+li $v0, 5		#le o inteiro do teclado	
+syscall			#realiza a leitura efetivamente
+move $t0, $v0		#move o conteudo de $v0 para $t0
+subi $t1, $t0, 1	#encontra o termo anterior
+
+
+
+#demais termos
+Condition: 		#laço condicional
+beqz $t1, Exit		#Caso $t1 = 0, o fatorial acaba e vamos para Exit
+mul $t0, $t1, $t0	#termo anterior é multiplicado pelo conteúdo de t0 e armazenado no próprio t0
+sub $t1, $t1, 1		#redução do termo em uma unidade
+j Condition		#caso seja diferente de 0, pula para a condição e retornamos à condição
+Exit:			#caso a condição não seja mais satisfeita, exit
+li $v0, 1		#imprimir um inteiro
+move $a0, $t0		#move o fatorial para $a0
+syscall			#imprime o fatorial
+li $v0, 10		#comando de saída
+syscall			#saída
+

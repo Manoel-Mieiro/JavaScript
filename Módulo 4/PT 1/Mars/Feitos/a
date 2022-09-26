@@ -1,0 +1,33 @@
+#ler um número e dizer se é par ou ímpar
+.data
+	Num1: .asciiz"Insira um numero:		"	#Insercao do num 
+	Par: .asciiz "E par	"			#Mensagem caso seja par
+	Impar:  .asciiz "E impar "			#Mensagem caso seja impar
+	
+	
+
+.text
+li $s3, 0		#resto 0 para verificar se e par
+li $s2, 2		#divisor verificador de par
+
+li $v0, 8		#le o inteiro do teclado
+li $v0, 5		#imprime um inteiro
+la $a0, Num1		#endereco de num1
+syscall			#impressão da mensagem
+
+move $s0, $v0		#transere os dados o $a0 para o $v0
+
+div $s0, $s2		#divide o conteudo de $s0 por $s2
+mfhi $s1		#armazena o resto da divisao em mfhi
+
+bne $s1, $s3, DisplayImpar	#compara se $s1 e $s3 sao diferentes
+li $v0, 4			#se forem iguais, cai aqui
+la $a0, Par
+syscall
+j exit
+DisplayImpar: li, $v0, 4	#se forem diferentes, cai aqui porque conta como verdadeiro para bne
+la $a0, Impar
+syscall
+exit: li $v0, 10		#saida do programa
+
+
