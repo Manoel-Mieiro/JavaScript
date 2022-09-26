@@ -1,5 +1,0 @@
-.div
-li $t0, 32 #carregar o valor IMEDIATO 32 no registrador $t0 (li = load immediate)
-li $t1, 5 #carregar o valor IMEDIATO 5 no registrador $t1 (li = load immediate)
-
-div $t0, $t1 #executa a soma de t0 com t1 e armazena o resultado em lo (low-order word)
