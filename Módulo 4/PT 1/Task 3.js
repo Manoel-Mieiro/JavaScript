@@ -4,42 +4,54 @@ let op1 = prompt ("Insira o operando 1:");
 let op2 = prompt ("Insira outro operando:");
 
 let operation = prompt ("Informe a operação!");
-
-Number(op1);
-Number (op2);
-
-if ((Number.isNaN(op1)) || (Number.isNaN(op2))){
+    
     op1 *= 1;
-    op2 *= 2;
-}
+    op2 *= 1;
 
+let asw;
 
-let asw = 1;
-
-console.log(Number.isNaN (asw));
-
-//----------------------------//Problema abaixo, resultado não é numero//-----------------------------------------//
-/*
 switch (operation){
     case "+":
         asw = op1 + op2;
-        console.log(asw);
-        alert (op1, " + ", op2, "= ", asw);
+        alert ("Eis o resultado:");
+        alert (asw);
         break;
     case "-":
         asw = op1 - op2;
-        alert (op1, " - ", op2, "= ", asw);
+        alert ("Eis o resultado:");
+        alert (asw);
         break;
     case "*":
+        alert ("Eis o resultado:");
         asw = op1 * op2;
-        alert (op1, "*", op2, "= ", asw);
+        alert (asw);
         break;
     case "/":
+        alert ("Eis o resultado:");
         asw = op1 /op2;
-        alert (op1, "/", op2, "= ", asw);
+        alert (asw);
         break;
  
     default:
         alert ("Operação inválida! Utilize apenas os seguintes sinais: '+', '-', '*', '/'.");
 }
-       */
+
+// Gabarito:
+
+let firstNumber = Number(prompt("Enter first number"));
+let secondNumber = Number(prompt("Enter second number"));
+let operand = prompt("Enter operand (+, -, * or /)");
+let result;
+
+if (!Number.isNaN(firstNumber) && !Number.isNaN(secondNumber)) {
+    switch (operand) {
+        case "+": result = firstNumber + secondNumber; break;
+        case "-": result = firstNumber - secondNumber; break;
+        case "*": result = firstNumber * secondNumber; break;
+        case "/": result = firstNumber / secondNumber; break;
+        default: result = "Error: unknown operand";
+    }
+} else {
+    result = "Error: at least one of the entered values is not a number";
+}
+alert(result);
