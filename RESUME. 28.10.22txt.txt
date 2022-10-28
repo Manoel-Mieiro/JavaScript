@@ -1,0 +1,2 @@
+MOD5 -> 5.2.1.9 ~ setTimeout and setInterval functions
+

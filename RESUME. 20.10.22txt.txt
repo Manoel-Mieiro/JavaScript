@@ -1,2 +1,0 @@
-MOD5 -> 5.2.1.7 ~ callbacks
-LIVRO -> 180
